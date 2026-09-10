@@ -80,7 +80,7 @@ export default function TaskListSimples() {
   const concluidas = tarefas.filter(t => t.concluida).length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-blue-800 p-6">
+    <div className="min-h-screen bg-radial from-fuchsia-700 from-20% to-gray-900 p-6">
       <div className="max-w-3xl mx-auto">
         
         <div className="mb-8">
