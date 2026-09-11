@@ -13,7 +13,7 @@ const Header = () => {
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
               <a href='#AddTarefa' class="mr-5 hover:text-gray-900">Gerenciar Tarefas</a>
             </nav>
-            <a href='https://www.linkedin.com/' target="_blank" class="inline-flex items-center bg-purple-700 border-0 py-1 px-3 focus:outline-none hover:bg-purple-900 rounded text-base text-white font-bold mt-4 md:mt-0">Confira nosso post
+            <a href='https://www.linkedin.com/in/guilherme-caiano-1a329b30b/' target="_blank" class="inline-flex items-center bg-purple-700 border-0 py-1 px-3 focus:outline-none hover:bg-purple-900 rounded text-base text-white font-bold mt-4 md:mt-0">Confira nosso post
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
