@@ -98,7 +98,7 @@ export default function TaskListSimples() {
         </div>
 
         <div className="bg-stone-950 rounded-lg shadow-lg p-6 mb-8 border border-purple-700">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4" id='AddTarefa'>
             ➕ Adicionar Nova Tarefa
           </h2>
 

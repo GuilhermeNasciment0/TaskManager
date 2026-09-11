@@ -13,7 +13,7 @@ Projeto desenvolvido para a disciplina de Front/Web da FIAP, focado na criação
 ## 👥 Integrantes da Equipe
 * Guilherme de Sousa Caiano - RM: 570491
 * Guilherme Nascimento dos Santos - RM: 572539
-* Victor Silva Souto - RM: 571093
+* Victor da Silva Souto - RM: 571093
 
 🔗 **Link do Repositório:** https://github.com/GuilhermeNasciment0/TaskManager
 

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
      
-    <footer class="text-white body-font bg-black border-purple-500 border-t max-w-svw">
+    <footer class="text-white body-font bg-black border-purple-500 border-t max-w-svw" id='Footer'>
       <div class="container px-5 py-6 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
