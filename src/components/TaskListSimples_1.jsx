@@ -2,17 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { Trash2, CheckCircle2, Circle } from 'lucide-react';
 
 export default function TaskListSimples() {
+  // Hook useState e Callback (lazy initialization) para buscar os dados iniciais do localStorage
   const [tarefas, setTarefas] = useState(() => {
     const tarefasSalvas = localStorage.getItem('tarefas');
     return tarefasSalvas ? JSON.parse(tarefasSalvas) : [];
   });
-
+  // Hooks useState para gerenciar os diferentes estados do componente
   const [filtro, setFiltro] = useState('todas');
   const [nome, setNome] = useState('');
   const [data, setData] = useState('');
   const [descricao, setDescricao] = useState('');
   const [prioridade, setPrioridade] = useState('média');
 
+  // Hook useEffect recebendo um Callback para salvar no localStorage quando 'tarefas' mudar
   useEffect(() => {
     localStorage.setItem('tarefas', JSON.stringify(tarefas));
   }, [tarefas]);
@@ -43,6 +45,7 @@ export default function TaskListSimples() {
 
   function marcarConcluida(id) {
     setTarefas(
+      // Método map recebendo um Callback para iterar e alterar a propriedade 'concluida'
       tarefas.map(tarefa =>
         tarefa.id === id 
           ? { ...tarefa, concluida: !tarefa.concluida }
@@ -52,14 +55,17 @@ export default function TaskListSimples() {
   }
 
   function deletarTarefa(id) {
+    // Método filter recebendo um Callback para remover a tarefa correspondente ao ID
     setTarefas(tarefas.filter(tarefa => tarefa.id !== id));
   }
 
   function obterTarefasFiltradas() {
     if (filtro === 'pendentes') {
+      // Método filter recebendo um Callback para retornar apenas tarefas não concluídas
       return tarefas.filter(t => !t.concluida);
     }
     if (filtro === 'concluidas') {
+      // Método filter recebendo um Callback para retornar apenas tarefas concluídas
       return tarefas.filter(t => t.concluida);
     }
     return tarefas;
@@ -73,19 +79,21 @@ export default function TaskListSimples() {
   
   const tarefasFiltradas = obterTarefasFiltradas();
   const total = tarefas.length;
+  // Método filter recebendo um Callback para contabilizar o número de pendentes
   const pendentes = tarefas.filter(t => !t.concluida).length;
+  // Método filter recebendo um Callback para contabilizar o número de concluídas
   const concluidas = tarefas.filter(t => t.concluida).length;
 
   return (
     <div className="min-h-screen bg-radial from-fuchsia-700 from-20% to-gray-900 p-6" >
       <div className="max-w-3xl mx-auto">
         
-        <div className="mb-8">
-          <h1 className="text-5xl font-bold text-white mb-2">
+        <div className="mb-8 text-center">
+          <h1 className="text-6xl font-bold text-white mb-2">
             📋 Minhas Tarefas
           </h1>
           <p className="text-blue-100">
-            Gerenciador de tarefas 
+            TaskManager - Gerenciador de tarefas
           </p>
         </div>
 
@@ -104,7 +112,7 @@ export default function TaskListSimples() {
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
                 placeholder="Ex: Desenvolver um diagrama DER"
-                className="w-full px-4 py-2 border border-purple-700 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-purple-700 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
 
@@ -116,7 +124,7 @@ export default function TaskListSimples() {
                 type="date"
                 value={data}
                 onChange={(e) => setData(e.target.value)}
-                className="w-full px-4 py-2 border border-purple-700 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-purple-700 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
 
@@ -130,7 +138,7 @@ export default function TaskListSimples() {
                 onChange={(e) => setDescricao(e.target.value)}
                 placeholder="Descreva a tarefa em detalhes..."
                 rows="3"
-                className="w-full px-4 py-2 border border-purple-700 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                className="w-full px-4 py-2 border border-purple-700 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
               />
             </div>
 
@@ -141,7 +149,7 @@ export default function TaskListSimples() {
               <select
                 value={prioridade}
                 onChange={(e) => setPrioridade(e.target.value)}
-                className="w-full px-4 py-2 border border-purple-700 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-700"
+                className="w-full px-4 py-2 border border-purple-700 bg-zinc-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="baixa">🟢 Baixa</option>
                 <option value="média">🟡 Média</option>

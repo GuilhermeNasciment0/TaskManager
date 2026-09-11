@@ -1,16 +1,47 @@
-# React + Vite
+# 📋 Task Manager - Sistema de Lista de Tarefas do Programador
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido para a disciplina de Front/Web da FIAP, focado na criação de um gerenciador de tarefas voltado para desenvolvedores com interface estilizada e armazenamento local.
 
-Currently, two official plugins are available:
+## 🏫 Informações Acadêmicas
+* **Instituição:** FIAP
+* **Curso:** Engenharia de Software
+* **Disciplina:** Front/Web
+* **Professor:** Wellington Cidade Silva
+* **Turma:** 1ESPG
+* **Avaliação:** Checkpoint 4
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👥 Integrantes da Equipe
+* Guilherme de Sousa Caiano - RM: 570491
+* Guilherme Nascimento dos Santos - RM: 572539
+* Victor Silva Souto - RM: 571093
 
-## React Compiler
+🔗 **Link do Repositório:** https://github.com/GuilhermeNasciment0/TaskManager
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tecnologias Utilizadas
+* **React + Vite**
+* **Tailwind CSS** (Estilização da interface)
+* **JavaScript**
+* **LocalStorage** (Persistência de dados)
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
+* Cadastro de tarefas com Nome, Data, Descrição e Nível de Prioridade.
+* Botões interativos para marcar a tarefa como concluída ou para removê-la.
+* Filtros rápidos para visualização dinâmica: Todas, Pendentes e Concluídas.
+* Persistência automática dos dados utilizando o `localStorage` do navegador.
+* Código devidamente comentado nas áreas que utilizam Hooks, métodos de array (filter e map) e callbacks.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Como rodar o projeto localmente
+
+No terminal bash da sua interface de desenvolvimento, preferencialmente o VSCODE, siga os seguintes passos:
+
+1. Clone este repositório:
+   `git clone https://github.com/GuilhermeNasciment0/TaskManager`
+2. Acesse a pasta do projeto:
+   `cd [nome-da-pasta]`
+3. Instale as dependências:
+   `npm install`
+4. Inicie o servidor de desenvolvimento:
+   `npm run dev`
+5. Abra no navegador o link que foi gerado no terminal (normalmente a porta escolhida pelo Vite será 5137):
+   `http://localhost:[porta]`
+
